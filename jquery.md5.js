@@ -217,11 +217,12 @@
     function rstr2hex(input) {
         var hex_tab = '0123456789abcdef',
             output = '',
-            x, i;
+            x,
+            i;
         for (i = 0; i < input.length; i += 1) {
             x = input.charCodeAt(i);
             output += hex_tab.charAt((x >>> 4) & 0x0F) +
-            hex_tab.charAt(x & 0x0F);
+                hex_tab.charAt(x & 0x0F);
         }
         return output;
     }
