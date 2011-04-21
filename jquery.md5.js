@@ -1,5 +1,5 @@
 /*
- * jQuery MD5 Plugin 1.0
+ * jQuery MD5 Plugin 1.1
  *
  * Copyright 2010, Sebastian Tschan, AQUANTUM
  * Licensed under the MIT license:
@@ -21,6 +21,7 @@
 /*global unescape, jQuery */
 
 (function ($) {
+    'use strict';
 
     /*
     * Add integers, wrapping at 2^32. This uses 16-bit operations internally
@@ -78,7 +79,7 @@
             oldc = c;
             oldd = d;
 
-            a = md5_ff(a, b, c, d, x[i +  0],  7, -680876936);
+            a = md5_ff(a, b, c, d, x[i],       7, -680876936);
             d = md5_ff(d, a, b, c, x[i +  1], 12, -389564586);
             c = md5_ff(c, d, a, b, x[i +  2], 17,  606105819);
             b = md5_ff(b, c, d, a, x[i +  3], 22, -1044525330);
@@ -98,7 +99,7 @@
             a = md5_gg(a, b, c, d, x[i +  1],  5, -165796510);
             d = md5_gg(d, a, b, c, x[i +  6],  9, -1069501632);
             c = md5_gg(c, d, a, b, x[i + 11], 14,  643717713);
-            b = md5_gg(b, c, d, a, x[i +  0], 20, -373897302);
+            b = md5_gg(b, c, d, a, x[i],      20, -373897302);
             a = md5_gg(a, b, c, d, x[i +  5],  5, -701558691);
             d = md5_gg(d, a, b, c, x[i + 10],  9,  38016083);
             c = md5_gg(c, d, a, b, x[i + 15], 14, -660478335);
@@ -121,7 +122,7 @@
             c = md5_hh(c, d, a, b, x[i +  7], 16, -155497632);
             b = md5_hh(b, c, d, a, x[i + 10], 23, -1094730640);
             a = md5_hh(a, b, c, d, x[i + 13],  4,  681279174);
-            d = md5_hh(d, a, b, c, x[i +  0], 11, -358537222);
+            d = md5_hh(d, a, b, c, x[i],      11, -358537222);
             c = md5_hh(c, d, a, b, x[i +  3], 16, -722521979);
             b = md5_hh(b, c, d, a, x[i +  6], 23,  76029189);
             a = md5_hh(a, b, c, d, x[i +  9],  4, -640364487);
@@ -129,7 +130,7 @@
             c = md5_hh(c, d, a, b, x[i + 15], 16,  530742520);
             b = md5_hh(b, c, d, a, x[i +  2], 23, -995338651);
 
-            a = md5_ii(a, b, c, d, x[i +  0],  6, -198630844);
+            a = md5_ii(a, b, c, d, x[i],       6, -198630844);
             d = md5_ii(d, a, b, c, x[i +  7], 10,  1126891415);
             c = md5_ii(c, d, a, b, x[i + 14], 15, -1416354905);
             b = md5_ii(b, c, d, a, x[i +  5], 21, -57434055);
