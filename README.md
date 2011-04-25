@@ -1,19 +1,19 @@
 # jQuery MD5 Plugin
 
 ## Usage
-Create (hex-encoded) MD5 hash of a given string value:
+Create ([hex](http://en.wikipedia.org/wiki/Hexadecimal)-encoded) [MD5](http://en.wikipedia.org/wiki/MD5) hash of a given string value:
 
     var md5 = $.md5('value');
 
-Create (hex-encoded) HMAC-MD5 hash of a given string value and key:
+Create ([hex](http://en.wikipedia.org/wiki/Hexadecimal)-encoded) [HMAC](http://en.wikipedia.org/wiki/HMAC)-MD5 hash of a given string value and key:
 
     var md5 = $.md5('value', 'key');
     
-Create raw MD5 hash of a given string value:
+Create raw [MD5](http://en.wikipedia.org/wiki/MD5) hash of a given string value:
 
     var md5 = $.md5('value', null, true);
 
-Create raw HMAC-MD5 hash of a given string value and key:
+Create raw [HMAC](http://en.wikipedia.org/wiki/HMAC)-MD5 hash of a given string value and key:
 
     var md5 = $.md5('value', 'key', true);
 
