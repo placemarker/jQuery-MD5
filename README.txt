@@ -15,6 +15,10 @@ Create raw MD5 hash of a given string value:
 Create raw HMAC-MD5 hash of a given string value and key:
     var md5 = $.md5('value', 'key', true);
 
+Requirements
+------------
+jQuery v. 1.4+
+
 License
 -------
 Released under the MIT license:
