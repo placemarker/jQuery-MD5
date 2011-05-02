@@ -18,7 +18,11 @@ Create raw [HMAC](http://en.wikipedia.org/wiki/HMAC)-MD5 hash of a given string 
     var md5 = $.md5('value', 'key', true);
 
 ## Requirements
-[jQuery](http://jquery.com/) v. 1.4+
+None.
+
+If [jQuery](http://jquery.com/) is not available, the md5 function will be added to the global object:
+
+    var md5 = md5('value');
 
 ## License
 Released under the [MIT license](http://creativecommons.org/licenses/MIT/).

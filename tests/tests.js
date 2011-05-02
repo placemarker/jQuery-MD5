@@ -1,5 +1,5 @@
 /*
- * jQuery MD5 Plugin Tests 1.0
+ * jQuery MD5 Plugin Tests 1.1
  * https://github.com/blueimp/jQuery-MD5
  *
  * Copyright 2010, Sebastian Tschan
@@ -9,9 +9,9 @@
  * http://creativecommons.org/licenses/MIT/
  */
 
-/*global $, module, test, strictEqual */
+/*global jQuery, module, test, strictEqual */
 
-$(function () {
+(function ($) {
     'use strict';
 
     module('Hex-encoded MD5');
@@ -54,4 +54,4 @@ $(function () {
         strictEqual($.md5('日本', '日本', true), '\xc7\x8b\x8csW\x92i\x81\xcc\x04t\x0b\xd3\xe9\xd0\x15');    
     });
 
-});
+}(typeof jQuery === 'function' ? jQuery : this));
