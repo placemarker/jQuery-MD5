@@ -1,5 +1,5 @@
 /*
- * jQuery MD5 Plugin 1.2
+ * jQuery MD5 Plugin 1.2.1
  * https://github.com/blueimp/jQuery-MD5
  *
  * Copyright 2010, Sebastian Tschan
@@ -17,7 +17,7 @@
  * See http://pajhome.org.uk/crypt/md5 for more info.
  */
 
-/*jslint bitwise: false */
+/*jslint bitwise: true */
 /*global unescape, jQuery */
 
 (function ($) {
